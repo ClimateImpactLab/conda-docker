@@ -1,0 +1,34 @@
+name: impactlab
+channels:
+- 'conda-forge'
+- 'defaults'
+dependencies:
+- python=2.7
+- pandas
+- xarray
+- dask
+- distributed
+- bottleneck
+- cyorderreddict
+- seaborn
+- numpy
+- scipy
+- pip
+- pip:
+  - wheel
+  - flake8
+  - tox
+  - coverage
+  - pytest
+  - pytest_cov
+  - Sphinx
+  - sphinx
+  - sphinx-rtd-theme
+  - jrnr
+  - climate_toolbox
+  - impax
+  - impactlab-tools
+  - impactlab-user
+  - sphinxtogithub
+prefix: '//anaconda/envs/documentation'
+
