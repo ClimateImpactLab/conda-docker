@@ -8,8 +8,10 @@ RUN yum -y update \
     && rm -rf /tmp/miniconda.sh \
     && yum install -y nodejs \
     && conda update conda \
-    && conda env create -f environment.yml \
+    && curl -sSL https://raw.githubusercontent.com/ClimateImpactLab/conda-docker/impactlab/miniconda2/centos7/environent.yml -o /tmp/environment.yml
+    && conda env create -f /tmp/environment.yml \
     && conda clean --all --yes \
     && rpm -e --nodeps bzip2 \
     && yum -y autoremove \
     && yum clean all
+    && source activate impactlab
